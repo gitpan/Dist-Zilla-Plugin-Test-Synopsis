@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::SynopsisTests;
 # ABSTRACT: Release tests for synopses
-our $VERSION = '2.000003'; # VERSION
+our $VERSION = '2.000004'; # VERSION
 use Moose;
 extends 'Dist::Zilla::Plugin::Test::Synopsis';
 
@@ -29,7 +29,7 @@ Dist::Zilla::Plugin::SynopsisTests - Release tests for synopses
 
 =head1 VERSION
 
-version 2.000003
+version 2.000004
 
 =head1 SYNOPSIS
 

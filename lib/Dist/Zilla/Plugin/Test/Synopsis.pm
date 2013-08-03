@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::Test::Synopsis;
 # ABSTRACT: Release tests for synopses
-our $VERSION = '2.000003'; # VERSION
+our $VERSION = '2.000004'; # VERSION
 use Moose;
 extends 'Dist::Zilla::Plugin::InlineFiles';
 
@@ -23,7 +23,7 @@ Dist::Zilla::Plugin::Test::Synopsis - Release tests for synopses
 
 =head1 VERSION
 
-version 2.000003
+version 2.000004
 
 =head1 SYNOPSIS
 
@@ -91,4 +91,4 @@ use Test::More;
 eval "use Test::Synopsis";
 plan skip_all => "Test::Synopsis required for testing synopses"
   if $@;
-all_synopsis_ok('lib');
+all_synopsis_ok();
