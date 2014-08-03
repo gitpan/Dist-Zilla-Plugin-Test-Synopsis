@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::SynopsisTests;
 # ABSTRACT: Release tests for synopses
-our $VERSION = '2.000004'; # VERSION
+our $VERSION = '2.000005'; # VERSION
 use Moose;
 extends 'Dist::Zilla::Plugin::Test::Synopsis';
 
@@ -21,7 +21,7 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
@@ -29,7 +29,7 @@ Dist::Zilla::Plugin::SynopsisTests - Release tests for synopses
 
 =head1 VERSION
 
-version 2.000004
+version 2.000005
 
 =head1 SYNOPSIS
 
@@ -69,6 +69,10 @@ Marcel Grünauer <marcel@cpan.org>
 =item *
 
 Mike Doherty <doherty@cpan.org>
+
+=item *
+
+Olivier Mengué <dolmen@cpan.org>
 
 =back
 

@@ -3,22 +3,25 @@ abstract: 'Release tests for synopses'
 author:
   - 'Marcel Grünauer <marcel@cpan.org>'
   - 'Mike Doherty <doherty@cpan.org>'
+  - 'Olivier Mengué <dolmen@cpan.org>'
 build_requires:
-  Capture::Tiny: 0
-  Module::Build: 0.3601
-  Moose::Autobox: 0
-  Test::DZil: 0
-  Test::More: 0.96
-  Test::Output: 0
-  autodie: 0
+  File::Spec: '0'
+  IO::Handle: '0'
+  IPC::Open3: '0'
+  Module::Build: '0.3601'
+  Moose::Autobox: '0'
+  Test::DZil: '0'
+  Test::More: '0.96'
+  Test::Output: '0'
+  autodie: '0'
 configure_requires:
-  Module::Build: 0.3601
+  Module::Build: '0.3601'
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.131560'
+generated_by: 'Dist::Zilla version 5.019, CPAN::Meta::Converter version 2.141520'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: Dist-Zilla-Plugin-Test-Synopsis
 no_index:
   directory:
@@ -26,15 +29,16 @@ no_index:
     - inc
     - examples
 requires:
-  Dist::Zilla: 4
-  Dist::Zilla::Plugin::InlineFiles: 0
-  Moose: 0
-  Test::Synopsis: 0
-  perl: 5.008
-  strict: 0
-  warnings: 0
+  Dist::Zilla: '4'
+  Dist::Zilla::Plugin::InlineFiles: '0'
+  Dist::Zilla::Role::PrereqSource: '0'
+  Moose: '0'
+  Test::Synopsis: '0'
+  perl: '5.008'
+  strict: '0'
+  warnings: '0'
 resources:
   bugtracker: https://github.com/doherty/Dist-Zilla-Plugin-Test-Synopsis/issues
   homepage: http://metacpan.org/release/Dist-Zilla-Plugin-Test-Synopsis/
   repository: git://github.com/doherty/Dist-Zilla-Plugin-Test-Synopsis.git
-version: 2.000004
+version: '2.000005'

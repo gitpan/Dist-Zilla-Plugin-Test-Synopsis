@@ -4,9 +4,26 @@ use warnings;
 
 package Dist::Zilla::Plugin::Test::Synopsis;
 # ABSTRACT: Release tests for synopses
-our $VERSION = '2.000004'; # VERSION
+our $VERSION = '2.000005'; # VERSION
 use Moose;
 extends 'Dist::Zilla::Plugin::InlineFiles';
+with 'Dist::Zilla::Role::PrereqSource';
+
+
+
+# Register the test prereqs as "develop requires"
+# so they will be listed in "dzil listdeps --author"
+sub register_prereqs {
+    my ($self) = @_;
+
+    $self->zilla->register_prereqs(
+        {
+            type  => 'requires',
+            phase => 'develop',
+        },
+        'Test::Synopsis' => '0',
+    );
+}
 
 
 __PACKAGE__->meta->make_immutable;
@@ -15,7 +32,7 @@ no Moose;
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =head1 NAME
 
@@ -23,7 +40,7 @@ Dist::Zilla::Plugin::Test::Synopsis - Release tests for synopses
 
 =head1 VERSION
 
-version 2.000004
+version 2.000005
 
 =head1 SYNOPSIS
 
@@ -71,6 +88,10 @@ Marcel Grünauer <marcel@cpan.org>
 
 Mike Doherty <doherty@cpan.org>
 
+=item *
+
+Olivier Mengué <dolmen@cpan.org>
+
 =back
 
 =head1 COPYRIGHT AND LICENSE
@@ -86,9 +107,6 @@ __DATA__
 ___[ xt/release/synopsis.t ]___
 #!perl
 
-use Test::More;
+use Test::Synopsis;
 
-eval "use Test::Synopsis";
-plan skip_all => "Test::Synopsis required for testing synopses"
-  if $@;
 all_synopsis_ok();

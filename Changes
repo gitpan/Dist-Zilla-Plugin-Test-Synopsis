@@ -1,5 +1,8 @@
 Revision history for Perl extension Dist-Zilla-Plugin-Test-Synopsis
 
+2.000005  2014-08-03
+  - Enforce a runtime dependency on Test::Synopsis [dolmen; gh-3]
+
 2.000004  2013-08-03
   - Don't shoot ourselves in the foot in tests [kentnl; GH #2]
 
